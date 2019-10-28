@@ -60,6 +60,23 @@ links[3].textContent = siteContent.nav["nav-item-4"];
 links[4].textContent = siteContent.nav["nav-item-5"];
 links[5].textContent = siteContent.nav["nav-item-6"];
 
+//New links
+const newLink1 = document.createElement("a");
+const newLink2 = document.createElement("a");
+
+newLink1.textContent = "Link one";
+newLink2.textContent = "Link two";
+
+const parentElement = document.querySelector("nav");
+
+parentElement.append(newLink1);
+parentElement.prepend(newLink2);
+
+const linkColor = document.querySelectorAll("a");
+linkColor.forEach(Element => {
+  Element.style.color = "green";
+});
+
 const ctaText = document.querySelector("h1");
 ctaText.textContent = siteContent["cta"]["h1"];
 
